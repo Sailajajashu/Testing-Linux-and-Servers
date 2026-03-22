@@ -1,0 +1,33 @@
+===== System Report =====
+Sun Mar 22 18:57:42 UTC 2026
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.3G     0  3.3G   0% /usr/lib/modules/6.6.87.2-microsoft-standard-WSL2
+none            3.3G  4.0K  3.3G   1% /mnt/wsl
+drivers         425G  336G   89G  80% /usr/lib/wsl/drivers
+/dev/sdd       1007G   53G  904G   6% /
+none            3.3G  388K  3.3G   1% /mnt/wslg
+none            3.3G     0  3.3G   0% /usr/lib/wsl/lib
+rootfs          3.3G  2.7M  3.3G   1% /init
+none            3.3G  708K  3.3G   1% /run
+none            3.3G     0  3.3G   0% /run/lock
+none            3.3G  1.1M  3.3G   1% /run/shm
+none            3.3G   76K  3.3G   1% /mnt/wslg/versions.txt
+none            3.3G   76K  3.3G   1% /mnt/wslg/doc
+C:\             425G  336G   89G  80% /mnt/c
+D:\              50G  7.8G   43G  16% /mnt/d
+tmpfs           671M   16K  671M   1% /run/user/1000
+overlay        1007G   53G  904G   6% /var/lib/docker/overlay2/0d34e51f335eb09eaa80c308bf682eda038171733aab40f92feffc15205d9b95/merged
+tmpfs           671M   16K  671M   1% /run/user/0
+               total        used        free      shared  buff/cache   available
+Mem:            6705        2574         585          35        3784        4130
+Swap:           2048          10        2037
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root       12513  8.7  6.1 1723000 425584 ?      Ssl  11:17  40:30 kube-apiserver --advertise-address=192.168.49.2 --allow-privileged=true --authorization-mode=Node,RBAC --client-ca-file=/var/lib/minikube/certs/ca.crt --enable-admission-plugins=NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,NodeRestriction,MutatingAdmissionWebhook,ValidatingAdmissionWebhook,ResourceQuota --enable-bootstrap-token-auth=true --etcd-cafile=/var/lib/minikube/certs/etcd/ca.crt --etcd-certfile=/var/lib/minikube/certs/apiserver-etcd-client.crt --etcd-keyfile=/var/lib/minikube/certs/apiserver-etcd-client.key --etcd-servers=https://127.0.0.1:2379 --kubelet-client-certificate=/var/lib/minikube/certs/apiserver-kubelet-client.crt --kubelet-client-key=/var/lib/minikube/certs/apiserver-kubelet-client.key --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname --proxy-client-cert-file=/var/lib/minikube/certs/front-proxy-client.crt --proxy-client-key-file=/var/lib/minikube/certs/front-proxy-client.key --requestheader-allowed-names=front-proxy-client --requestheader-client-ca-file=/var/lib/minikube/certs/front-proxy-ca.crt --requestheader-extra-headers-prefix=X-Remote-Extra- --requestheader-group-headers=X-Remote-Group --requestheader-username-headers=X-Remote-User --secure-port=8443 --service-account-issuer=https://kubernetes.default.svc.cluster.local --service-account-key-file=/var/lib/minikube/certs/sa.pub --service-account-signing-key-file=/var/lib/minikube/certs/sa.key --service-cluster-ip-range=10.96.0.0/12 --tls-cert-file=/var/lib/minikube/certs/apiserver.crt --tls-private-key-file=/var/lib/minikube/certs/apiserver.key
+root       11807  7.5  1.5 2906756 104548 ?      Ssl  11:17  34:39 /var/lib/minikube/binaries/v1.35.0/kubelet --bootstrap-kubeconfig=/etc/kubernetes/bootstrap-kubelet.conf --config=/var/lib/kubelet/config.yaml --hostname-override=minikube --kubeconfig=/etc/kubernetes/kubelet.conf --node-ip=192.168.49.2
+root       12472  5.7  1.5 1368052 109056 ?      Ssl  11:17  26:32 kube-controller-manager --allocate-node-cidrs=true --authentication-kubeconfig=/etc/kubernetes/controller-manager.conf --authorization-kubeconfig=/etc/kubernetes/controller-manager.conf --bind-address=127.0.0.1 --client-ca-file=/var/lib/minikube/certs/ca.crt --cluster-cidr=10.244.0.0/16 --cluster-name=mk --cluster-signing-cert-file=/var/lib/minikube/certs/ca.crt --cluster-signing-key-file=/var/lib/minikube/certs/ca.key --controllers=*,bootstrapsigner,tokencleaner --kubeconfig=/etc/kubernetes/controller-manager.conf --leader-elect=false --requestheader-client-ca-file=/var/lib/minikube/certs/front-proxy-ca.crt --root-ca-file=/var/lib/minikube/certs/ca.crt --service-account-private-key-file=/var/lib/minikube/certs/sa.key --service-cluster-ip-range=10.96.0.0/12 --use-service-account-credentials=true
+root       11224  4.7  1.4 5891112 101104 ?      Ssl  11:17  21:53 /usr/bin/dockerd -H tcp://0.0.0.0:2376 -H fd:// --containerd=/run/containerd/containerd.sock -H unix:///var/run/docker.sock --default-ulimit=nofile=1048576:1048576 --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=docker --insecure-registry 10.96.0.0/12
+root       12534  4.7  1.1 11808340 75532 ?      Ssl  11:17  21:43 etcd --advertise-client-urls=https://192.168.49.2:2379 --cert-file=/var/lib/minikube/certs/etcd/server.crt --client-cert-auth=true --data-dir=/var/lib/minikube/etcd --feature-gates=InitialCorruptCheck=true --initial-advertise-peer-urls=https://192.168.49.2:2380 --initial-cluster=minikube=https://192.168.49.2:2380 --key-file=/var/lib/minikube/certs/etcd/server.key --listen-client-urls=https://127.0.0.1:2379,https://192.168.49.2:2379 --listen-metrics-urls=http://127.0.0.1:2381 --listen-peer-urls=https://192.168.49.2:2380 --name=minikube --peer-cert-file=/var/lib/minikube/certs/etcd/peer.crt --peer-client-cert-auth=true --peer-key-file=/var/lib/minikube/certs/etcd/peer.key --peer-trusted-ca-file=/var/lib/minikube/certs/etcd/ca.crt --snapshot-count=10000 --trusted-ca-file=/var/lib/minikube/certs/etcd/ca.crt --watch-progress-notify-interval=5s
+root       11569  3.4  0.8 1281476 55272 ?       Ssl  11:17  15:41 /usr/bin/cri-dockerd --container-runtime-endpoint fd:// --pod-infra-container-image=registry.k8s.io/pause:3.10.1 --network-plugin=cni --hairpin-mode=hairpin-veth
+root       14814  2.6  0.9 3479340 64348 ?       Ssl  11:17  12:06 /usr/bin/promtail -config.file=/etc/promtail/promtail.yaml
+reddha5    15358  2.2  3.4 1978228 240156 ?      Ssl  11:17  10:25 /bin/prometheus --config.file=/etc/prometheus/config_out/prometheus.env.yaml --web.enable-lifecycle --web.external-url=http://monitoring-kube-prometheus-prometheus.monitoring:9090 --web.route-prefix=/ --storage.tsdb.retention.time=10d --storage.tsdb.path=/prometheus --storage.tsdb.wal-compression --web.config.file=/etc/prometheus/web_config/web-config.yaml
+root       12487  1.1  0.6 1277452 47564 ?       Ssl  11:17   5:13 kube-scheduler --authentication-kubeconfig=/etc/kubernetes/scheduler.conf --authorization-kubeconfig=/etc/kubernetes/scheduler.conf --bind-address=127.0.0.1 --kubeconfig=/etc/kubernetes/scheduler.conf --leader-elect=false
